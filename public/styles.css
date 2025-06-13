@@ -1,0 +1,115 @@
+/* Global */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  height: 100vh;
+  display: flex;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+}
+
+/* Split Grid Layout */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+}
+
+/* Left Side (Image) */
+.left {
+  background: linear-gradient(135deg, #ffdbe9, #fff0f5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.left img {
+  max-width: 90%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease;
+}
+
+.left img:hover {
+  transform: scale(1.03);
+}
+
+/* Right Side (Content) */
+.right {
+  position: relative;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  overflow: hidden;
+}
+
+.right::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: #ffe5ec;
+  border-radius: 50%;
+  top: -100px;
+  right: -100px;
+  z-index: 0;
+}
+
+.content {
+  max-width: 450px;
+  text-align: center;
+  animation: fadeIn 1.2s ease-in-out;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Typography */
+.content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: #b03a63;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.content h1 span {
+  color: #721c34;
+}
+
+.content p {
+  font-size: 1.125rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* Button */
+.btn {
+  background: linear-gradient(135deg, #b03a63, #8a2b4c);
+  color: white;
+  padding: 14px 32px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
