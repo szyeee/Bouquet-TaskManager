@@ -60,7 +60,7 @@
   <div>
     <button
       type="submit"
-      class="w-full py-2 bg-barbiePink hover:bg-barbiePink-dark text-white font-medium rounded-2xl transition"
+      class="w-full py-2 bg-barbiePink hover:bg-barbiePink-dark text-black font-medium rounded-2xl transition"
     >
       Log in
     </button>
